@@ -39,7 +39,7 @@ export class HeaderComponent implements OnInit {
           console.log(res);
         },
         err => {
-          console.log("Error occured");
+          console.log("Error");
         }
       );
   }
