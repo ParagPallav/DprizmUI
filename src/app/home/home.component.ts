@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { HttpClient } from "../../../node_modules/@angular/common/http";
+import { ToastrService } from "ngx-toastr";
 
 @Component({
   selector: "app-home",
@@ -12,7 +13,7 @@ export class HomeComponent implements OnInit {
   department: any;
   response: any;
   show = false;
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private toastr: ToastrService) {}
 
   ngOnInit() {}
   getUser() {
@@ -40,6 +41,10 @@ export class HomeComponent implements OnInit {
         },
         err => {
           console.log("Error Happened");
+          this.toastr.success("Hello world!", "Toastr fun!");
+          this.toastr.error("everything is broken", "Major Error", {
+            timeOut: 1000
+          });
         }
       );
   }

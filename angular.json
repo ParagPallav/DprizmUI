@@ -21,9 +21,17 @@
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/ngx-toastr/toastr.css",
+              "./node_modules/angular-bootstrap-md/scss/bootstrap/bootstrap.scss",
+              "./node_modules/angular-bootstrap-md/scss/mdb-free.scss",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/chart.js/dist/Chart.js",
+              "./node_modules/hammerjs/hammer.min.js",
+              "./node_modules/toastr/build/toastr.min.js",
+              "./node_modules/chart.js/dist/Chart.bundle.js"
+            ]
           },
           "configurations": {
             "production": {
